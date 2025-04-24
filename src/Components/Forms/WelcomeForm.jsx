@@ -74,7 +74,7 @@ export const WelcomeForm = ({ name = "Adrian" }) => {
   return (
     <>
       <main className="container">
-        <section className="welcome-header">
+        <section className="header">
           <div className="content">
             <div className="photo">
               <p>Foto ejemplo</p>
@@ -88,12 +88,13 @@ export const WelcomeForm = ({ name = "Adrian" }) => {
             Para comenzar, ayúdanos a verificar tus datos
           </h5>
           <form className="user-data" onSubmit={onSubmit}>
-            <div ref={inputRef.username}>
-              <label htmlFor="username">
+            <div className="input-div" ref={inputRef.username}>
+              <label className="label-input" htmlFor="username">
                 <i className="bi bi-person"></i>
                 Nombre
               </label>
               <input
+                className="input"
                 name="username"
                 type="text"
                 placeholder="Nombre"
@@ -101,12 +102,13 @@ export const WelcomeForm = ({ name = "Adrian" }) => {
                 onChange={onTextChange}
               />
             </div>
-            <div ref={inputRef.useremail}>
-              <label htmlFor="useremail">
+            <div className="input-div" ref={inputRef.useremail}>
+              <label className="label-input" htmlFor="useremail">
                 <i className="bi bi-envelope"></i>
                 Correo eléctronico
               </label>
               <input
+                className="input"
                 name="useremail"
                 type="email"
                 placeholder="Correo electronico"
@@ -114,12 +116,13 @@ export const WelcomeForm = ({ name = "Adrian" }) => {
                 onChange={onTextChange}
               />
             </div>
-            <div ref={inputRef.userworkplace}>
-              <label htmlFor="userworkplace">
+            <div className="input-div" ref={inputRef.userworkplace}>
+              <label className="label-input" htmlFor="userworkplace">
                 <i className="bi bi-geo-alt"></i>
                 Lugar de trabajo
               </label>
               <input
+                className="input"
                 name="userworkplace"
                 type="text"
                 placeholder="Lugar de trabajo"
@@ -127,12 +130,13 @@ export const WelcomeForm = ({ name = "Adrian" }) => {
                 onChange={onTextChange}
               />
             </div>
-            <div ref={inputRef.userbirthday}>
-              <label htmlFor="userbirthday">
+            <div className="input-div" ref={inputRef.userbirthday}>
+              <label className="label-input" htmlFor="userbirthday">
                 <i className="bi bi-cake"></i>
                 Edad
               </label>
               <input
+                className="input"
                 name="userbirthday"
                 type="number"
                 placeholder="Dia de nacimiento"
@@ -140,12 +144,13 @@ export const WelcomeForm = ({ name = "Adrian" }) => {
                 onChange={onTextChange}
               />
             </div>
-            <div ref={inputRef.userphone}>
-              <label htmlFor="userphone">
+            <div className="input-div" ref={inputRef.userphone}>
+              <label className="label-input" htmlFor="userphone">
                 <i className="bi bi-phone"></i>
                 Teléfono celular
               </label>
               <input
+                className="input"
                 name="userphone"
                 type="number"
                 placeholder="Numero de telefono"
@@ -153,7 +158,7 @@ export const WelcomeForm = ({ name = "Adrian" }) => {
                 onChange={onTextChange}
               />
             </div>
-            <input type="submit" className="continue-btn" value={"Continuar"} />
+            <input type="submit" className="continue-btn login" value={"Continuar"} />
           </form>
         </section>
       </main>
