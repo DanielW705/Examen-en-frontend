@@ -1,0 +1,175 @@
+:root {
+  --form-yellow: #ffd520;
+  --writable-text-color: #101010;
+  --title-color: #3e3e3e;
+  --label-color: #868589;
+  --no-writable-text-color: #434142;
+  --cards-bacground-color: #f7f7f7;
+  --link-text-color: #005fc5;
+  --label-color-darker: #686767;
+  --parragraph-color: #8e8d8d;
+  --shadow-color: #0000000a;
+  --disable-input: #b3b3b3;
+  --error-color: #b2dbf7;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+.navbar {
+  width: 100%;
+  height: 82px;
+}
+.navbar .items {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 8px 8px 16px var(--shadow-color);
+  background-color: white;
+}
+.navbar .items p,
+.navbar .items h1 {
+  color: var(--no-writable-text-color);
+}
+.navbar .items h1 {
+  font-size: 16px;
+}
+.navbar .items .exit {
+  width: 5%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .items .exit button {
+  width: 95%;
+  height: 95%;
+  font-size: 16px;
+  background: none;
+  border: none;
+  color: var(--label-color);
+}
+.navbar .items .exit button i {
+  margin-left: 8.4px;
+}
+.container {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .welcome-header {
+  width: 100%;
+  height: 160px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cards-bacground-color);
+}
+.container .welcome-header .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
+  width: 360px;
+}
+.container .welcome-header .content .photo {
+  grid-row: 1 / 3;
+  align-content: center;
+  justify-items: center;
+}
+.container .welcome-header .content .photo p {
+  width: 65px;
+  height: 65px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 100px;
+  border: var(--form-yellow) 3px solid;
+  margin: 0;
+  font-size: 12px;
+}
+.container .welcome-header .content .welcome-title {
+  text-align: center;
+  color: var(--title-color);
+  font-size: 24px;
+}
+.container .welcome-header .content .user-name {
+  text-align: center;
+  color: var(--no-writable-text-color);
+  font-size: 36px;
+  font-weight: bold;
+}
+.container .form-data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 64px 413px;
+}
+.container .form-data .instructions {
+  font-size: 16px;
+  font-weight: 600;
+}
+.container .form-data .user-data {
+  width: 100%;
+  height: 460px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.container .form-data .user-data div {
+  display: grid;
+  height: 60%;
+  grid-template-rows: 50% 50%;
+}
+.container .form-data .user-data div label i {
+  margin-right: 5px;
+  color: var(--form-yellow);
+}
+.container .form-data .user-data div label {
+  font-size: 12px;
+  color: var(--label-color);
+}
+.container .form-data .user-data div input {
+  border: none;
+  border-bottom: var(--disable-input) 1.5px solid;
+  color: var(--label-color);
+  transition: 0.5s;
+  font-size: 16px;
+}
+.container .form-data .user-data div input:focus {
+  border-bottom: var(--form-yellow) 1.5px solid;
+}
+.container .form-data .user-data .continue-btn {
+  grid-row: 4;
+  grid-column: 1 / span 2;
+  width: 196px;
+  height: 48px;
+  background-color: var(--form-yellow);
+  color: var(--no-writable-text-color);
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  justify-self: center;
+}
+.error {
+  animation: focus-error 3s;
+}
+@keyframes focus-error {
+  from {
+    background-color: var(--error-color);
+  }
+  to {
+    background-color: transparent;
+  }
+}
